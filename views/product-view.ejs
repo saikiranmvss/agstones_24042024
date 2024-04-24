@@ -1,0 +1,536 @@
+<html>
+    
+    <head>
+       <title><%=singleProdDatas.prod_name%> | Quartz | Agastya Stones</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <base href="../" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <style>
+            .owl-carousel .owl-item img {
+                height:130px !important;
+                object-fit:cover !important;
+            }
+        </style>
+        <meta name="google-site-verification" content="bfCBd4mgQPj-PuPRehsfzP8JSiX_fp2R9JnEftNgayA" />
+<!-- Google tag (gtag.js) -->
+    <%- include('head') %>
+<meta name="robots" content="noindex,nofollow">
+    </head>
+    
+    <body>
+        
+        <button onclick="topFunction()" id="topscroll" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+<header>
+           
+           <div class="container">
+               
+               <div class="row">
+                   
+                   <div class="col-12">
+                       
+                       <div class="logo"><a href="/"><img src="images/logo.png"></a></div>
+                       
+                       <div class="menuicon">
+                           <div class="wrap">
+<!--                               <a href="#contact">Contact</a> -->
+                               <div class="icon" data-bs-toggle="modal" data-bs-target="#menutrig">
+                                   <span></span>
+                                   <span></span>
+                                   <span></span>
+                               </div>
+                           </div>
+                        </div>
+                       
+                   </div>
+                   
+               </div>
+               
+           </div>
+            
+            
+            
+        </header>
+        
+       <div class="modal menubox" id="menutrig" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="termsLabel" aria-modal="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">  
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Close <i class="fas fa-times"></i></button>
+                        <img src="images/logo-black.png" class="logo">
+                        <div class="nav-links">
+                            <a href="" class="link">Home</a>
+                             <a href="about" class="link">Our Story</a> 
+<!--                            <a href="why-agastya-stones.html" class="link">Why Us?</a>-->
+                            <a href="products" class="link">View Collection</a>
+                            <a href="our-process" class="link">Our Process</a>
+<!--                            <a class="link">Join Franchise</a>-->
+                            <a href="locations.html" class="link">Locations</a>
+                            <a href="resources.html" class="link">Resources</a>
+                            <a href="contact.html" class="link">Reach Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section class="prodpagebanner">
+        
+            <div id="carouselExampleIndicators" class="carousel slide pointer-event" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                <%=singleProdDatas.prod_images%>
+                <% if(singleProdDatas!=''){ 
+                let images=JSON.parse(singleProdDatas.prod_images);                
+                
+                                        
+                for(j=0;j< images.length; j++){        
+
+                %>
+
+                    <div class="carousel-item <%= j==0 ? 'active' : '' %>" style="position: relative;">
+                      
+                      <img src="images/<%=images[j]%>" class="w-100 d-none d-lg-block" style="height:95%">
+                      <img src="images/<%=images[j]%>" class="w-100 d-lg-none">
+
+                   </div>
+                
+                <%
+
+                }
+            }
+
+                %>
+
+                </div>
+                
+                <span class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"><i class="fas fa-chevron-left"></i></span>
+                
+                <span class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"><i class="fas fa-chevron-right"></i></span>
+                
+            </div>
+            <div class="main"><div class="content">
+                <h6>
+                <%
+                let stoneCat=['Granite','Quartz','Quartzite','Marble','Onyx','Semi Precious','Porcelain'];
+                %>
+                <%=stoneCat[singleProdDatas.prod_stone_cat]%>
+
+                </h6>
+                <h1 class="title"><%=singleProdDatas.prod_name%></h1><div class="desline"></div></div></div>
+        </section>
+   
+        
+        <section class="prodcontent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h3>Applications</h3>
+                        <div class="applic">
+                        <%
+                        let quartzType1=[0,1,2,3,4,5];
+                        if (quartzType1.includes(singleProdDatas.prod_stone_cat)) { 
+                         %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-1.png">
+                                <h5>Bathroom or Bathroom Vanity</h5>
+                            </div>
+                            <% } %>
+                            
+                            <%
+                                let quartzType2=[0,1,2,3,5,6];
+                                 if (quartzType2.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                           <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-2.png">
+                                <h5>Flooring</h5>
+                            </div>
+                            <% } %>
+
+                            <%
+                                let quartzType3=[0,1,2,3,5,6];
+                                if (quartzType3.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-3.png">
+                                <h5>Countertops</h5>
+                            </div>
+                            <% } %>
+
+                            <%
+                                let quartzType4=[0,1,2,3,6];
+                                if (quartzType4.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-4.png">
+                                <h5>Fireplace Hearth</h5>
+                            </div>
+                            <% } %>
+
+                            <%
+                                let quartzType5=[0,1,2,3,4,5];
+                                if (quartzType5.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-5.png">
+                                <h5>Commercial Applications</h5>
+                            </div>
+                            <% } %>
+
+                            <%
+                                let quartzType6=[1,3,4,5,6];
+                                if (quartzType6.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-9.png">
+                                <h5>Decorative</h5>
+                            </div>
+                            <% } %>
+
+                            <%
+                                let quartzType7=[0,1,2,3,4,5,6];
+                                if (quartzType7.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-6.png">
+                                <h5>Tables</h5>
+                            </div>
+                            <% } %>
+
+                            
+                            <%
+                                let quartzType8=[1,2];
+                                if (quartzType8.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-7.png">
+                                <h5>Burn/Heat Resistant</h5>
+                            </div>
+                            <% } %>
+                            <%
+                                let quartzType9=[1,3,4,5];
+                                if (quartzType9.includes(singleProdDatas.prod_stone_cat)) { 
+                                %>
+                            <div class="wrap">
+                                <img src="images/product-pages/quartzite/icon-8.png">
+                                <h5>Wall Cladding</h5>
+                            </div>
+                            
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="prodspecif side">
+                            <div class="wrap">
+                                <h6>PRIMARY COLOR(S)</h6>
+                                <p><%=singleProdDatas.prod_primary_color%></p>
+                            </div>
+                            <div class="wrap">
+                                <h6>Origin</h6>
+                                <p><%=singleProdDatas.prod_origin%></p>
+                            </div>
+                            <div class="wrap">
+                                <h6>SKU</h6>
+                                <p><%=singleProdDatas.prod_sku%></p>
+                            </div>
+                            <div class="wrap">
+                                <h6>SERIES</h6>
+                                <p><%=singleProdDatas.prod_series%></p>
+                            </div>
+                            <div class="wrap">
+                                <h6>AVAILABLE FINISHES</h6>
+                                <p>
+                                <%
+                                let finishArr=JSON.parse(singleProdDatas.prod_finishes);
+                                let finishes=['Polished','Honed','Matte','Leather'];
+                                for(l=0;l< finishArr.length;l++){ %>
+                                    <%=finishes[finishArr[l]]%><br>
+                                <%
+                                }                                    
+                                %>
+                                </p>
+                            </div>
+                            <div class="wrap">
+                                <h6>PRICE RANGE</h6>
+                                <p><%=singleProdDatas.prod_price_range%></p>
+                            </div>
+                            <div class="wrap">
+                                <h6>SLABS</h6>
+                                <%
+                                
+                                slab_size1=singleProdDatas.prod_slab_size1=='' ? '' : singleProdDatas.prod_slab_size1;
+                                slab_size2=singleProdDatas.prod_slab_size1=='' ? '' : singleProdDatas.prod_slab_size2;
+                                slab_jumbo=singleProdDatas.prod_slab_jumbo=='' ? '' : singleProdDatas.prod_slab_jumbo;
+                                slab_superjumbo=singleProdDatas.prod_slab_superjumbo=='' ? '' : singleProdDatas.prod_slab_superjumbo;
+
+                                let arrSizes = [slab_size1, slab_size2, slab_jumbo, slab_superjumbo];
+                                arrSizes = arrSizes.filter(size => size); 
+                                let arrSizesString = arrSizes.join(' , ');
+
+                                %>
+                                <p>Size: <%=arrSizesString%></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-12" style=""><a class="btndes" href="https://www.agstones.com/?roomvoStartVisualizer=true" style="float: right;margin-right: 4rem;margin-top: 1rem;"><span class="desbtn"><i></i></span> Visualize your Space</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pt-5 pb-5 hunset" style="background: #f4f4f4;">
+            <div class="col-12 ps-md-4 ps-3 pe-md-4 pe-3">
+                <h2 class="heading">
+                    Similar Styles
+                </h2>
+                <div class="owl-carousel similarprodcarousel">
+                    <%
+                
+                    function createSlug(text) {
+                        let slug = text.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                        return slug;
+                    }
+                    %>
+                    <% if(loadProds!=''){ 
+                        for(k=0;k< loadProds.length; k++){        
+            
+                        %>
+
+                    <div class="wrap" onclick="window.location.href='product/<%=createSlug(loadProds[j].prod_name)%>'">
+                        <img src="images/<%=JSON.parse(loadProds[k].prod_images)[0]%>">
+                        <h6><%=loadProds[k].prod_name%></h6>
+                    </div>
+
+                    <%} } %>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer>
+            
+            <div class="container">
+                <div class="row">
+                   <div class="col-lg-4">
+                       <div class="foot-text">
+                           <img src="images/logo-white.png" class="footer-logo">
+                       </div>
+                            <div class="footer-social-links">
+                                <a href="https://www.facebook.com/agastyastones/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/agastyastones/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://twitter.com/AgastyaStones"><i class="fab fa-x-twitter"></i></a>
+                                <a href="https://www.linkedin.com/company/agstones/"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                       
+                   </div>
+                    <div class="col-12 col-md-4 col-lg-2">
+                       <h3 class="footer-title">
+                           Menu
+                       </h3>
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="about">Our Story</a>
+                            <a href="products">Our Collection</a>
+                            <a href="our-process">Our Process</a>
+                            <a href="gallery-collection">Gallery</a>
+                            <a href="contact">Reach Us</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-2">
+                       <h3 class="footer-title">
+                           Our Collection
+                       </h3>
+                        <div class="footer-menu">
+                            <a href="quartzite.html">Quartzite</a>
+                            <a href="quartz.html">Quartz</a>
+                            <a href="granite.html">Granite</a>
+                            <a href="marble.html">Marble</a>
+                            <a href="onyx.html">Onyx</a>
+                            <a href="semi-precious-stones.html">Semi Precious Stones</a>
+                            <a href="porcelain.html">Porcelain</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                       <h3 class="footer-title">
+                           Informational
+                       </h3>
+                        <div class="footer-menu">
+                            <a href="locations.html">Our Locations</a>
+                            <a href="resources.html">Resources</a>
+                            <a href="warranty.html">Warranty</a>
+                            <a href="care-maintenance.html">Care & Maintenance</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms-and-conditions.html">Terms & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                           
+                            © Copyright 2023 Agastya Global Stones. <span class="d-inline-block">All Rights Reserved.</span><div class="btfootaddress"><i class="fas fa-map-marker-alt"></i> 459 Herndon Pkwy STE 18 Herndon, <span class="d-inline-block">VA 20170</span></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+        <script>
+            AOS.init();
+        </script>
+        
+        <script>
+        $(document).ready(function() {
+              var owl = $('.proddispcarousel');
+              owl.owlCarousel({
+                loop: true,
+                margin: 30,
+                responsiveClass:true,
+				autoplay:true,
+				autoplayTimeout:4000,
+				autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:true
+                    },
+                    600:{
+                        items:3,
+                        nav:true
+                    },
+                    1000:{
+                        items:5,
+                        nav:true,
+                        loop:true
+                    }
+                }
+                });
+              
+            })
+        
+        </script>
+        
+        <script>
+        $(document).ready(function() {
+              var owl = $('.similarprodcarousel');
+              owl.owlCarousel({
+                loop: true,
+                margin: 20,
+                responsiveClass:true,
+				autoplay:true,
+				autoplayTimeout:4000,
+				autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:true
+                    },
+                    600:{
+                        items:3,
+                        nav:true
+                    },
+                    1000:{
+                        items:5,
+                        nav:true,
+                        loop:true
+                    }
+                }
+                });
+              
+            })
+        
+        </script>
+        
+        <script>
+        $(document).ready(function() {
+              var owl = $('.tipscarousel');
+              owl.owlCarousel({
+                loop: true,
+                margin: 20,
+                responsiveClass:true,
+				autoplay:true,
+				autoplayTimeout:4000,
+				autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:true
+                    },
+                    600:{
+                        items:3,
+                        nav:true
+                    },
+                    1000:{
+                        items:4,
+                        nav:true,
+                        loop:true
+                    }
+                }
+                });
+              
+            })
+        
+        </script>
+        
+        <script>
+            let mybutton = document.getElementById("topscroll");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } 
+                else {
+                    mybutton.style.display = "none";
+                }
+            }
+            
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        
+        <script>
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+	$(".innerbanner").css({
+		backgroundSize: (100 + scroll/15)  + "%",
+		top: -(scroll/10)  + "%",
+
+	});
+  
+});
+
+</script>
+        
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        
+    </body>
+    
+</html>

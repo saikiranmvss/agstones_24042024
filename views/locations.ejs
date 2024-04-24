@@ -1,0 +1,55 @@
+<html>
+    
+    <head>
+       <title>Locations | Agastya Stones</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+ 
+<!-- Google tag (gtag.js) -->
+    <%- include('head') %>
+
+    </head>
+    
+    <body class="location-page">
+        
+        <button onclick="topFunction()" id="topscroll" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+        <%- include('header') %>
+        
+        
+        <section class="locations hunset">
+            <img src="images/locations.jpg">
+        </section>
+        
+        <%- include('footer') %>
+        
+        <script>
+            AOS.init();
+        </script>
+        
+        <script>
+            let mybutton = document.getElementById("topscroll");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } 
+                else {
+                    mybutton.style.display = "none";
+                }
+            }
+            
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        
+        
+    </body>
+    
+</html>

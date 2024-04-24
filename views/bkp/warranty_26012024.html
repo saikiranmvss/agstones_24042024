@@ -1,0 +1,597 @@
+<html>
+    
+    <head>
+       <title>Warranty Registration | Agastya Stones</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="https://cdn.roomvo.com/static/scripts/b2b/agstones.js" async></script>
+    </head>
+    
+    <body>
+        
+        <button onclick="topFunction()" id="topscroll" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+ <%- include('header') %>
+        
+        
+        <div class="innerbanner warrantypage">
+            <div class="main">
+                <div class="content">
+               <h1 class="title">Warranty Registration</h1>
+                <div class="desline"></div>
+            </div>
+            </div>
+        </div>
+        
+        <section class="mt-5">
+            <div class="container">
+                <div class="row justify-content-center pt-lg-3 pb-md-5">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4 text-center"><big>Quartz</big></h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <img src="images/warranty/residential-lifetime.jpg" class="w-100 mb-4">
+                                <a class="btndes m-auto" style="width: fit-content;"><span class="desbtn"><i></i></span> View Now</a>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <img src="images/warranty/commertial-10-years.jpg" class="w-100 mb-4">
+                                <a class="btndes m-auto" style="width: fit-content;"><span class="desbtn"><i></i></span> View Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<div class="row justify-content-center pb-5">
+    <div class="col-md-9 pb-md-3">
+        <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Personal Information</li>
+                <li>
+Product Information</li>
+                <li>
+Dealer Information</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Personal Information</h2>
+                <input type="text" name="fname" placeholder="First Name" id="firstname" name="firstname" onfocus='this.style.border=""'/>
+                <input type="text" name="lname" placeholder="Last Name" id="lastname" name="lastname" onfocus='this.style.border=""'/>
+                <input type="tel" name="phone" placeholder="Phone" id="phone" name="phone" onfocus='this.style.border=""'/>
+                <input type="email" name="email" placeholder="Email" id="email" name="email" onfocus='this.style.border=""'/>
+                <input type="text" name="address" placeholder="Address" id="address" name="address" onfocus='this.style.border=""'/>
+                <input type="button" name="next" class="next action-button" value="Next" data-id="1"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">
+Product Information</h2>
+                <input type="text" name="twitter" placeholder="Twitter" id="twitter" onfocus='this.style.border=""'/>
+                <input type="text" name="facebook" placeholder="Facebook" id="facebook" name="facebook" onfocus='this.style.border=""'/>
+                <input type="text" name="gplus" placeholder="Google Plus" id="google_plus" name="google_plus" onfocus='this.style.border=""'/>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next" data-id="2"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">
+Dealer Information</h2>
+                <input type="text" name="email" placeholder="Email" id="dealer_email" onfocus='this.style.border=""'/>
+                <input type="password" name="pass" placeholder="Password" id="password" onfocus='this.style.border=""'/>
+                <input type="password" name="cpass" placeholder="Confirm Password" id="confirm_pass" onfocus='this.style.border=""'/>
+                <p style="font-size: 14px;text-align: center;color: red;display:none;" id="pass_match">Passwords didn't match</p>
+                <p style="font-size: 14px;text-align: center;color: black;background-color: #a0f5a0;padding: 1rem;display: none;" id="thanks-message">Thank you for your submission</p>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="submit" class="next submit action-button" value="Submit" data-id="3"/>
+            </fieldset>
+        </form>
+    </div>
+</div>
+            </div>
+        </section>
+        
+        <footer>
+            
+            <div class="container">
+                <div class="row">
+                   <div class="col-lg-4">
+                       <div class="foot-text">
+                           <img src="images/logo-white.png" class="footer-logo">
+                       </div>
+                            <div class="footer-social-links">
+                                <a><i class="fab fa-facebook-f"></i></a>
+                                <a><i class="fab fa-instagram"></i></a>
+                                <a><i class="fab fa-x-twitter"></i></a>
+                                <a><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                       
+                   </div>
+                    <div class="col-12 col-md-4 col-lg-2">
+                       <h3 class="footer-title">
+                           Menu
+                       </h3>
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">Our Story</a>
+                            <a href="products.html">Our Collection</a>
+                            <a href="our-process.html">Our Process</a>
+                            <a href="gallery-collection.html">Gallery</a>
+                            <a href="contact.html">Reach Us</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-2">
+                       <h3 class="footer-title">
+                           Our Collection
+                       </h3>
+                        <div class="footer-menu">
+                            <a href="quartzite.html">Quartzite</a>
+                            <a href="quartz.html">Quartz</a>
+                            <a href="granite.html">Granite</a>
+                            <a href="marble.html">Marble</a>
+                            <a href="onyx.html">Onyx</a>
+                            <a href="semi-precious-stones.html">Semi Precious Stones</a>
+                            <a href="porcelain.html">Porcelain</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                       <h3 class="footer-title">
+                           Informational
+                       </h3>
+                        <div class="footer-menu">
+                            <a href="resources.html">Resources</a>
+                            <a href="warranty.html">Warranty</a>
+                            <a href="care-maintenance.html">Care & Maintenance</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms-and-conditions.html">Terms & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                           
+                            © Copyright 2023 Agastya Global Stones. <span class="d-inline-block">All Rights Reserved.</span><div class="btfootaddress"><i class="fas fa-map-marker-alt"></i> 459 Herndon Pkwy STE 18 Herndon, <span class="d-inline-block">VA 20170</span></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+        <script>
+            AOS.init();
+        </script>
+        
+       <script>
+        $(document).ready(function() {
+              var owl = $('.productgalcarousel');
+              owl.owlCarousel({
+                loop: true,
+                margin: 0,
+                responsiveClass:true,
+				autoplay:true,
+				autoplayTimeout:4000,
+				autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:1,
+                        nav:true
+                    },
+                    1000:{
+                        items:1,
+                        nav:true,
+                        loop:true
+                    }
+                }
+                });
+              
+            })
+        
+        </script>
+        
+       <script>
+        $(document).ready(function() {
+              var owl = $('.homeprodcarousel');
+              owl.owlCarousel({
+                loop: true,
+                margin: 30,
+                responsiveClass:true,
+				autoplay:true,
+				autoplayTimeout:4000,
+				autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:2,
+                        nav:true
+                    },
+                    1000:{
+                        items:3,
+                        nav:true,
+                        loop:true
+                    }
+                }
+                });
+              
+            })
+        
+        </script>
+        
+        <script>
+            let mybutton = document.getElementById("topscroll");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } 
+                else {
+                    mybutton.style.display = "none";
+                }
+            }
+            
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        
+        <script>
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+	$(".innerbanner").css({
+		backgroundSize: (100 + scroll/15)  + "%",
+		top: -(scroll/10)  + "%",
+
+	});
+  
+});
+
+</script>
+        
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+        
+        
+        <script>
+        
+        
+            const colors = ['', 'darkgrey', 'lightdarkgrey', 'darkergray', 'darkergray', 'lightdarkgrey', 'darkergray', 'darkergray', 'lightdarkgrey']
+
+            const sections = [...document.querySelectorAll('section')]
+
+            window.addEventListener('scroll', function () {
+
+              const scrollFromTop = window.pageYOffset
+
+              for (let i = 0; sections.length > i; i++) {
+
+                if (scrollFromTop <= sections[i].offsetTop) {
+                  document.body.className = colors[i] 
+                  break
+                } 
+
+              }
+
+            })
+        </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+        
+        //jQuery time
+let twitter,facebook,googlePlus , firstName , lastName , email , pass , confirmPass  , dealerEmail , address 
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+
+    let dataId=$(this).attr('data-id');
+    firstName=$('#firstname').val();
+    lastName=$('#lastname').val();
+    email=$('#email').val();
+    phone=$('#phone').val();
+    address=$('#address').val();
+   let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(dataId==1){
+
+        if(firstName=='' || lastName=='' || ( email=='' || !emailRegex.test(email) ) || ( phone=='' || phone.length<10 ) || address=='' ){
+    
+    if(firstName==''){
+        $('#firstname').css('border','2px solid red');
+    }else{
+        $('#firstname').css('border','');
+    }
+    if(lastName==''){
+        $('#lastname').css('border','2px solid red');
+    }else{
+        $('#lastname').css('border','');
+    }
+    if( email=='' || !emailRegex.test(email) ){
+        $('#email').css('border','2px solid red');
+    }else{
+        $('#email').css('border','');
+    }
+    if( phone=='' || phone.length<10 ){
+        $('#phone').css('border','2px solid red');
+    }else{
+        $('#phone').css('border','');
+    }
+    if(address==''){
+        $('#address').css('border','2px solid red');
+    }else{
+        $('#address').css('border','');
+    }
+
+}else{
+
+    if(animating) return false;
+animating = true;
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//activate next step on progressbar using the index of next_fs
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show(); 
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+        //as the opacity of current_fs reduces to 0 - stored in "now"
+        //1. scale current_fs down to 80%
+        scale = 1 - (1 - now) * 0.2;
+        //2. bring next_fs from the right(50%)
+        left = (now * 50)+"%";
+        //3. increase opacity of next_fs to 1 as it moves in
+        opacity = 1 - now;
+        current_fs.css({
+    'transform': 'scale('+scale+')',
+    'position': 'absolute'
+  });
+        next_fs.css({'left': left, 'opacity': opacity});
+    }, 
+    duration: 800, 
+    complete: function(){
+        current_fs.hide();
+        animating = false;
+    }, 
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack'
+});
+
+}	
+
+    }else if(dataId==2){
+
+
+    twitter=$('#twitter').val();
+    facebook=$('#twitter').val();
+    googlePlus=$('#google_plus').val();
+
+    if(twitter=='' || facebook=='' || googlePlus=='' ){
+    
+    if(twitter==''){
+        $('#twitter').css('border','2px solid red');
+    }else{
+        $('#twitter').css('border','');
+    }
+    if(facebook==''){
+        $('#facebook').css('border','2px solid red');
+    }else{
+        $('#facebook').css('border','');
+    }
+    if(googlePlus==''){
+        $('#google_plus').css('border','2px solid red');
+    }else{
+        $('#google_plus').css('border','');
+    }
+
+}else{
+
+    if(animating) return false;
+animating = true;
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//activate next step on progressbar using the index of next_fs
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show(); 
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+        //as the opacity of current_fs reduces to 0 - stored in "now"
+        //1. scale current_fs down to 80%
+        scale = 1 - (1 - now) * 0.2;
+        //2. bring next_fs from the right(50%)
+        left = (now * 50)+"%";
+        //3. increase opacity of next_fs to 1 as it moves in
+        opacity = 1 - now;
+        current_fs.css({
+    'transform': 'scale('+scale+')',
+    'position': 'absolute'
+  });
+        next_fs.css({'left': left, 'opacity': opacity});
+    }, 
+    duration: 800, 
+    complete: function(){
+        current_fs.hide();
+        animating = false;
+    }, 
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack'
+});
+
+}	
+
+
+
+    }else{
+
+    dealerEmail=$('#dealer_email').val();
+    pass=$('#password').val();
+    confirmPass=$('#confirm_pass').val();
+
+    if(  ( dealerEmail=='' || !emailRegex.test(dealerEmail) )  || pass=='' || confirmPass=='' || (pass!=confirmPass) ){
+    
+    if(( dealerEmail=='' || !emailRegex.test(dealerEmail) )){
+        $('#dealer_email').css('border','2px solid red');
+    }else{
+        $('#dealer_email').css('border','');
+    }
+
+
+    if( pass!='' && confirmPass!='' && pass!=confirmPass){
+        $('#pass_match').show();
+        $('#password').css('border','2px solid red');
+        $('#confirm_pass').css('border','2px solid red');
+    }else{
+
+
+        if(pass==''){
+        $('#password').css('border','2px solid red');
+    }else{
+        $('#password').css('border','');
+    }
+
+    
+    if(confirmPass==''){
+        $('#confirm_pass').css('border','2px solid red');
+    }else{
+        $('#confirm_pass').css('border','');
+    }
+
+    if(pass!='' && confirmPass!=''){
+        $('#pass_match').hide();
+        $('#password').css('border','');
+        $('#confirm_pass').css('border','');
+    }
+
+
+    }
+
+    }else{
+
+        (function(){
+                    emailjs.init("lLglvDBe88EcNzTyo");
+                })();
+
+                let name=firstName+' '+lastName;
+
+                var templateParams = {
+                        lead_name: name,                    
+                        lead_email: email,
+                        lead_address: address,
+                        lead_facebook:facebook,
+                        lead_twitter:twitter,
+                        lead_phone:phone,
+                        lead_twitter:facebook,
+                        lead_google:googlePlus,
+                        lead_dealemail:dealerEmail,
+                        lead_password:pass,
+                        to_email:'saisatya51@gmail.com'
+                    };
+                
+                emailjs.send('service_mdzr24m', 'template_uwa9dbe', templateParams)
+                .then(function(response) {
+                    $('#thanks-message').show();
+                    setTimeout(function(){
+                    $('#thanks-message').hide();
+                    location.reload();
+                    },2500)
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+
+    }
+
+
+
+    }
+
+
+
+
+});
+
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+
+$(document).on('input','#phone',function(){
+    var data=$(this).val();
+    $(this).val(data.replace(/[^0-9]/gi, ''));
+})
+        
+        </script>
+        
+    </body>
+    
+</html>

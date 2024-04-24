@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
+
+
+*{
+    outline: none !important;
+}
+
+body{
+    font-size: 20px;
+    background: #fff;
+    color: #1c1c1c;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+    overflow-x: hidden;
+    transition: 2s all;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    
+    font-family: 'Playfair Display', serif;
+}
+
+.padding{
+    padding: 4rem 0;
+}
+
+.heading{
+    font-size: 56px;
+    margin-bottom: 25px;
+    color: #1c1c1c;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0 0;
+}
+
+header .logo{
+    text-align: center;
+}
+
+header .logo img{
+    width: 120px;
+}
+
+.menuicon{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menuicon .wrap{
+    position: fixed;
+    top: 40px;
+    right: 5%;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    box-shadow: 0 0 10px #00000015;
+}
+
+.menuicon .wrap:after{
+    position: absolute;
+    background: #fff;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    z-index: -1;
+}
+
+.menuicon a{
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 16px 25px;
+    font-weight: 600;
+    color: #333 !important;
+}
+
+.menuicon .icon{
+    background: #222;
+    width: 56px;
+    height: 56px;
+    padding: 18px 10px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.menuicon .icon span{
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 8px;
+    line-height: 0;
+    position: relative;
+    align-items: center;
+}
+
+.menuicon .icon span:after{
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    right: 0;
+    border-radius: 50%;
+}
+
+.menuicon .icon span:last-child{
+    margin: 0;
+}
+
+.menubox{
+    background-color: #00000000 !important;
+    max-width: 100%;
+/*
+    animation: slideInDown;
+    animation-duration: 1s;
+*/
+    width: 100%;
+    display: flex !important;
+/*
+    background: url(../images/menubg.png) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+*/
+    top: -100%;
+    transition: .8s ease-in;
+}
+
+.menubox.show{
+    top: 0;
+}
+
+.menubox .modal-dialog {
+    margin: 0 0 0 auto;
+    max-width: 100% !important;
+    width: 100%;
+    background: #fff;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(255,255,255, 0.65), rgba(255,255,255, 0.6)), url(../images/menu-bg.jpg) repeat;
+/*    background-size: cover;*/
+    background-position: top;
+    display: none;
+}
+
+.menubox.show .modal-dialog{
+    display: block;
+}
+
+.menubox .modal-content {
+    background: none;
+    border: none;
+    padding: 0 1rem;
+}
+
+.menubox .modal-content .btn-close{
+    color: #111;
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    background: none;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    padding: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.menubox .modal-content .nav-links{
+    padding: 9rem 5rem 0;
+/*    max-width: 900px;*/
+    margin: auto;
+}
+
+.menubox .modal-content .nav-links .link{
+ font-size: 50px;
+    font-size: 36px;
+    font-family: Playfair Display;
+    display: inline-block;
+    display: block;
+    padding: 16px 0;
+    font-weight: 600;
+    width: fit-content;
+/*    padding: 0 20px;*/
+/*
+    border-right: 3px solid #fff;
+    border-right: 3px solid #333;
+*/
+    color: #fff !important;
+    color: #1c1c1c !important;
+/*    margin-top: 30px;*/
+    line-height: 1;
+    margin-left: auto;
+    animation: fadeInDown;
+    animation-delay: .5s;
+    animation-duration: 1s;
+}
+
+.menubox .modal-content .nav-links .link:last-child{
+    border: 0;
+}
+
+.menubox .modal-content .logo{
+    width: 300px;
+    max-width: 50%;
+    position: absolute;
+    top: 30px;
+}
+
+.innerbanner{
+    background: #000;
+    color: #fff;
+    height: 85vh;
+    overflow: hidden;
+    background: url(../../raleigh-images/banner-main.jpg);
+    background-size: 100%;
+  background-position: bottom center;
+/*    position: relative;*/
+}
+
+.innerbanner .main{
+    position: relative;
+    height: 85vh;
+    background: #00000064;
+}
+
+.innerbanner img{
+    width: 100%;
+    opacity: .6;
+}
+
+.innerbanner .content{
+    position: absolute;
+    bottom: 6rem;
+    width: 100%;
+}
+
+.innerbanner .content .title{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+}
+
+.innerbanner .content .subtitle{
+    opacity: .8;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.innerbanner .desline{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    height: 1px;
+    background: #fff;
+    justify-content: space-between;
+    margin: 1.5rem auto 0;
+}
+
+.innerbanner .desline:after, .innerbanner .desline:before{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    content: ' ';
+    display: block;
+}
+
+section{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+section::-webkit-scrollbar{
+    width: 0px;
+    display: none;
+}
+
+footer {
+    padding: 3rem 0 0;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 16px;
+}
+
+footer .formdes{
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: 12px;
+    grid-row-gap: 16px;
+}
+
+footer .formdes input, footer .formdes textarea{
+    width: 100%;
+    resize: none;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    font-size: 16px;
+    min-height: 50px;
+    padding: 0;
+    color: #fff;
+} 
+
+footer .formdes input::placeholder, footer .formdes textarea::placeholder{
+    color: #eee;
+}
+
+footer .formdes .wrap{
+    width: calc(33.33% - 9px);
+}
+
+footer .formdes .wrap.full{
+    width: 100%;
+}
+
+footer .formdes .wrap button{
+    background: linear-gradient(-45deg, #e2b659 0, #ca9629 100%) !important;
+    padding: 10px 30px;
+    color: #000;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 0;
+    min-width: 200px;
+    margin: 10px 0 0;
+}
+
+footer .bottom-footer{
+    padding: 20px 0;
+    margin: 3rem 0 0;
+    border-top: 1px solid #333;
+}
+
+.footer-social-links{
+    float: right;
+}
+
+.footer-social-links a {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-social-links a i {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer h4{
+    font-size: 32px;
+}
+
+footer .addressdiv{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+footer .addressdiv i{
+        background: -webkit-linear-gradient(-45deg, #e2b659 0, #e2b659 40%, #ca9629 60%, #ca9629 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    min-width: 24px;
+    line-height: 1.6;
+}
+
+footer .addressdiv h6{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+    letter-spacing: 2px;
+}
+
+footer .addressdiv a{
+    color: #fff;
+}
+
+footer .addressdiv .wrap{
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+footer .timing{
+    display: flex;
+    margin: 0 0 5px;
+}
+
+footer .timing > div{
+    width: 100%;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+@media (max-width: 992px){
+    .innerbanner{
+        height: 40vh;
+        background: url(../../raleigh-images/banner-main-mob.jpg);
+        background-size: 100% ;
+        background-position: bottom center;
+    }
+    .innerbanner .main{
+        height: 40vh;
+    }
+    .innerbanner .content{
+        bottom: 4rem;
+    }
+    .heading{
+        font-size: 44px;
+    }
+    #contact{
+        margin: 1rem 0 0;
+    }
+    .menubox .modal-content .btn-close{
+        right: 1rem;
+    }
+    .menubox .modal-content .nav-links{
+        padding: 8rem 0rem 0;
+    }
+}
+
+@media (max-width: 767px){
+    body{
+        font-size: 16px;
+    }
+    .padding{
+        padding: 2.2rem 5px 1.6rem;
+    }
+    .heading{
+        font-size: 34px;
+        margin: 0 0 15px;
+    }
+    footer{
+        padding: 2.2rem 5px 0;
+    }
+    footer .bottom-footer{
+        text-align: center;
+    }
+    .footer-social-links{
+        float: none;
+        margin: 15px 0 0;
+    }
+    .footer-social-links a{
+        margin: 0 10px;
+    }
+}
+@media (max-width: 600px){
+    header .logo img{
+        width: 100px;
+    }
+    .innerbanner .content .title{
+        font-size: 40px;
+    }
+    .innerbanner{
+        height: 80vh;
+    }
+    .innerbanner .main{
+        height: 80vh;
+    }
+    footer h4{
+        font-size: 28px;
+    }
+    .menubox .modal-body{
+        padding: 0;
+    }
+    .menubox .modal-content .btn-close {
+        right: 0;
+    }
+    .menubox .modal-content .nav-links {
+        padding: 6rem 0 0;
+    }
+    .menubox .modal-content .nav-links .link {
+        display: block;
+        font-size: 24px;
+        border: 0;
+        /* padding: 0; */
+    }
+}
+@media(max-width: 500px){
+    footer .formdes .wrap{
+        width: 100%;
+    }
+    footer .addressdiv{
+        flex-wrap: wrap;
+        font-size: 18px;
+    }
+    footer .addressdiv h6{
+        font-size: 14px;
+        margin: 0 0 8px;
+    }
+    footer .addressdiv .wrap{
+        font-size: 14px;
+        margin: 15px 0 0;
+    }
+    footer .timing{
+        margin: 0 0 3px;
+    }
+}
