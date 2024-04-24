@@ -50,8 +50,7 @@ app.get('/cincy-countertops',
   express.static(path.join(__dirname, 'public', 'cincy-countertops')),
   express.static(path.join(__dirname, 'public', 'cincy-countertops', 'images')),
   express.static(path.join(__dirname, 'public', 'cincy-countertops', 'css')),
-  (req, res) => {
-    // Render the HTML file located in the cincy-countertops folder
+  (req, res) => {    
     res.sendFile(path.join(__dirname, 'public', 'cincy-countertops', 'index.html'));
 });
 
