@@ -63,34 +63,34 @@
         });
     });
 
-    let url="";
+    // let url="";
 
-    $('.websitepop').click(function(){
+    // $('.websitepop').click(function(){
 
-            if (history.pushState) {
-             url=$(this).attr('data-href');
-                var newurl ='';
-                if(url.includes('cincy-countertops')){
-                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'cincy-countertops';
-                }
+    //         if (history.pushState) {
+    //          url=$(this).attr('data-href');
+    //             var newurl ='';
+    //             if(url.includes('cincy-countertops')){
+    //                 var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'cincy-countertops';
+    //             }
 
-                if(url.includes('raleigh-countertops')){
-                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'raleigh-countertops';
-                }    
+    //             if(url.includes('raleigh-countertops')){
+    //                 var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'raleigh-countertops';
+    //             }    
                                    
-                window.history.pushState({path:newurl}, '', newurl);
-            }
+    //             window.history.pushState({path:newurl}, '', newurl);
+    //         }
 
-            $('iframe').remove();
-            $('body').css('overflow','hidden');
+    //         $('iframe').remove();
+    //         $('body').css('overflow','hidden');
 
 
-            $('body').html('<iframe src="'+url+'" style="width:100%; height:100vh;"></iframe><button class="close-button"><i class="fas fa-times"></i></button>');
+    //         $('body').html('<iframe src="'+url+'" style="width:100%; height:100vh;"></iframe><button class="close-button"><i class="fas fa-times"></i></button>');
             
-            $('.close-button').click(function() {
-                window.location.href="https://agstones.com/";
-            });
-        });
+    //         $('.close-button').click(function() {
+    //             window.location.href="https://agstones.com/";
+    //         });
+    //     });
 
 </script>
         
