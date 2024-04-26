@@ -64,8 +64,23 @@
     });
 
     $('.websitepop').click(function(){
+
+            if (history.pushState) {
+                var newurl ='';
+                if(url.includes('cincy-countertops')){
+                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '/cincy-countertops';
+                }
+
+                if(url.includes('raleigh-countertops')){
+                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '/raleigh-countertops';
+                }    
+                                   
+                window.history.pushState({path:newurl}, '', newurl);
+            }
+
             $('iframe').remove();
             $('body').css('overflow','hidden');
+
             let url=$(this).attr('data-href');
             $('body').html('<iframe src="'+url+'" style="width:100%; height:100vh;"></iframe><button class="close-button"><i class="fas fa-times"></i></button>');
             
