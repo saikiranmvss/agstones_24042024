@@ -66,6 +66,7 @@
     $('.websitepop').click(function(){
 
             if (history.pushState) {
+                let url=$(this).attr('data-href');
                 var newurl ='';
                 if(url.includes('cincy-countertops')){
                     var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '/cincy-countertops';
@@ -81,7 +82,7 @@
             $('iframe').remove();
             $('body').css('overflow','hidden');
 
-            let url=$(this).attr('data-href');
+
             $('body').html('<iframe src="'+url+'" style="width:100%; height:100vh;"></iframe><button class="close-button"><i class="fas fa-times"></i></button>');
             
             $('.close-button').click(function() {
