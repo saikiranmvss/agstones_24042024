@@ -71,11 +71,11 @@
              url=$(this).attr('data-href');
                 var newurl ='';
                 if(url.includes('cincy-countertops')){
-                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '/cincy-countertops';
+                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'cincy-countertops';
                 }
 
                 if(url.includes('raleigh-countertops')){
-                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '/raleigh-countertops';
+                    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'raleigh-countertops';
                 }    
                                    
                 window.history.pushState({path:newurl}, '', newurl);
