@@ -63,10 +63,12 @@
         });
     });
 
+    let url="";
+
     $('.websitepop').click(function(){
 
             if (history.pushState) {
-                let url=$(this).attr('data-href');
+             url=$(this).attr('data-href');
                 var newurl ='';
                 if(url.includes('cincy-countertops')){
                     var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '/cincy-countertops';
