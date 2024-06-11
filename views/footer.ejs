@@ -59,7 +59,9 @@
 <script>
     $(document).ready(function(){
         $(".dropdown-toggle").click(function(){
-            $(this).siblings("#dropdown-menu").toggle();
+            let menu = $(this).attr('id');
+            $(menu+'-menus').toggle();
+            // $(this).siblings("#dropdown-menu").toggle();
         });
     });
 
