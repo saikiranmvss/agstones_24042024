@@ -3250,9 +3250,59 @@ section::-webkit-scrollbar{
 .darkblack{
     background: #333;
 }
+header .menuiconbar{
+    display: none;
+}
 
 @media (max-width: 992px){
     section{
         min-height: unset;
     }
 }
+@media (min-width: 1024px){
+    header .logo{
+        width: 30%;
+        text-align: left;
+    }
+    header .menuiconbar{
+      width: 70%;
+      text-align: right;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 30px;
+    }
+    header .menuicon{
+        display: none;
+    }
+    header .menuiconbar li{
+      position: relative;
+      list-style: none;
+
+    }
+    header .menuiconbar li a{
+        display: block;
+        padding: 10px 0;
+        color: white;
+        font-size: 20px;
+        font-family: 'Playfair Display', serif;
+    }
+    header .menuiconbar li .submenu{
+        display: none;
+        padding: 15px;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        min-width: 200px;
+    }
+    header .menuiconbar li:hover .submenu{
+        display: block;
+
+    }
+    header .menuiconbar li .submenu a{
+        color: black;
+    }
+}
+
