@@ -523,6 +523,15 @@ footer .timing > div{
         margin: 0 0 3px;
     }
 }
+header .menuiconbar{
+    display: none;
+}
+
+@media (max-width: 992px){
+    section{
+        min-height: unset;
+    }
+}
 @media (min-width: 1024px){
     header .logo{
         width: 30%;
