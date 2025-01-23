@@ -14,109 +14,8 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <style>
-              .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .popup {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    padding: 20px;
-    animation: fadeIn 0.5s ease-out;
-  }
-
-  .popup h1 {
-    font-size: 24px;
-    color: #0066cc;
-    margin: 0 0 15px;
-  }
-
-  .popup p {
-    font-size: 18px;
-    color: #333;
-    margin: 0 0 20px;
-  }
-
-  .popup .close-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #0066cc;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-
-  .popup .close-btn:hover {
-    background: #004d99;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Snowflakes animation */
-  .snowflakes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 999;
-  }
-
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    width: 10px;
-    height: 10px;
-    background: white;
-    opacity: 0.8;
-    border-radius: 50%;
-    animation: fall 10s linear infinite;
-  }
-
-  @keyframes fall {
-    from {
-      transform: translateY(0) rotate(0deg);
-    }
-    to {
-      transform: translateY(100vh) rotate(360deg);
-    }
-  }
-        </style>
     </head>
     <body>
-        <div class="popup-overlay" id="popup">
-            <div class="popup">
-              <h1>Weather Alert</h1>
-              <p>We will be closed on January 22, 2025, due to inclement weather. We apologize for the inconvenience and appreciate your understanding.</p>
-              <a href="#" class="close-btn" onclick="closePopup()">Close</a>
-            </div>
-          </div>
           
        <header>
            
@@ -314,9 +213,6 @@
         $("#nvlink-btn").trigger("click");
     })
 
-    function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-  }
 </script>
         
     </body>
