@@ -141,28 +141,28 @@
                         <h4>Get in Touch with Us</h4>
                         <div class="formdes">
                             <div class="wrap">
-                                <input type="text" placeholder="First Name">
+                                <input type="text" placeholder="First Name" id="firstname" >
                             </div>
                             <div class="wrap">
-                                <input type="text" placeholder="Last Name">
+                                <input type="text" placeholder="Last Name" id="lastname" >
                             </div>
                             <div class="wrap">
-                                <input type="text" placeholder="City">
+                                <input type="text" placeholder="City" id="city" >
                             </div>
                             <div class="wrap">
-                                <input type="text" placeholder="State">
+                                <input type="text" placeholder="State" id="state" >
                             </div>
                             <div class="wrap">
-                                <input type="email" placeholder="Email">
+                                <input type="email" placeholder="Email" id="email" >
                             </div>
                             <div class="wrap">
-                                <input type="tel" placeholder="Phone Number">
+                                <input type="tel" placeholder="Phone Number" id="phone">
                             </div>
                             <div class="wrap full">
-                                <textarea rows="3" placeholder="How can we help you?"></textarea>
+                                <textarea rows="3" placeholder="How can we help you?" id="message"></textarea>
                             </div>
                             <div class="wrap">
-                                <button type="submit">Submit</button>
+                                <button type="button" onclick="formSubmit()">Submit</button>
                             </div>
                        </div>
                     </div>
@@ -212,6 +212,106 @@
     $(document).on("click",".link", function(){
         $("#nvlink-btn").trigger("click");
     })
+
+    function formSubmit(){
+        let firstName=$('#firstname').val();
+        let lastName=$('#lastname').val();
+        let email=$('#email').val();
+        let phone=$('#phone').val();
+        let city=$('#city').val();
+        let state=$('#state').val();
+        let message=$('#message').val();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if(firstName=='' || lastName=='' || ( email=='' || !emailRegex.test(email) ) || ( phone=='' || phone.length<10 ) || city=='' || state=='' || message==''){
+
+            if(firstName==''){
+                $('#firstname').css('border-bottom','2px solid red');
+            }else{
+                $('#firstname').css('border-bottom','');
+            }
+            if(lastName==''){
+                $('#lastname').css('border-bottom','2px solid red');
+            }else{
+                $('#lastname').css('border-bottom','');
+            }
+            if( email=='' || !emailRegex.test(email) ){
+                $('#email').css('border-bottom','2px solid red');
+            }else{
+                $('#email').css('border-bottom'-bottom,'');
+            }
+            if( phone=='' || phone.length<10 ){
+                $('#phone').css('border-bottom','2px solid red');
+            }else{
+                $('#phone').css('border-bottom','');
+            }
+            if(city==''){
+                $('#city').css('border-bottom','2px solid red');
+            }else{
+                $('#city').css('border-bottom','');
+            }
+            if(state==''){
+                $('#state').css('border-bottom','2px solid red');
+            }else{
+                $('#state').css('border-bottom','');
+            }
+            if(message==''){
+                $('#message').css('border-bottom','2px solid red');
+            }else{
+                $('#message').css('border-bottom','');
+            }
+
+        }else{
+            $('#form').css('opacity','0.5');
+            $('.spinner').show();
+               (function(){
+                    emailjs.init("LlRA6jnPV7YmJUKdi");
+                })();
+
+                let name=firstName+' '+lastName;
+
+                var templateParams = {
+                        lead_name: name,                    
+                        lead_city: city,
+                        lead_state: state,
+                        lead_email:email,
+                        lead_phone:phone,
+                        lead_message:message,
+                        to_email:'sales@agstonescincy.com'
+                        // to_email:'info@agstones.com'
+                    };
+                
+                emailjs.send('service_angsjee', 'template_6n2bz5k', templateParams)
+                .then(function(response) {
+
+                    let postData={firstName,lastName,city,state,email,phone,message,formName:'contactform_submit'};
+
+                    $.ajax({
+                        type:'post',
+                        data:postData,
+                        url:'admin/products-ajax.php',
+                        success:function(data){
+                            console.log(data);
+                            $('.spinner').hide();
+                            $('#form').css('opacity','10');
+                            document.getElementById('form').reset();
+                            $('#thanks-message').show();
+                            setTimeout(function(){
+                            $('#thanks-message').hide();                    
+                            },2500)
+                        }
+                    })
+
+                }, function(error) {
+                    $('.spinner').hide();
+                    $('#thanks-message').hide();
+                    $('#form').css('opacity','10');
+                    console.log('FAILED...', error);
+                });
+
+        }
+
+    }
 
 </script>
         
