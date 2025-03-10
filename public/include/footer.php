@@ -95,7 +95,7 @@
                                 <a><i class="fab fa-x-twitter"></i></a>
                                 <a><i class="fab fa-pinterest-p"></i></a>
                             </div>
-                            © Copyright 2023 Agastya Global Stones. <span class="d-inline-block">All Rights Reserved.</span>
+                            © Copyright 2025 Agastya Global Stones. <span class="d-inline-block">All Rights Reserved.</span>
                         </div>
                     </div>
                 </div>
