@@ -112,6 +112,11 @@
         </style>
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTVQJ7SR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
         <nav class="navigation">
             <a href="https://hpanel.hostinger.com" rel="nofollow" target="_blank">
                 <svg width="150" height="30" viewBox="0 0 150 30" fill="none" xmlns="http://www.w3.org/2000/svg">
