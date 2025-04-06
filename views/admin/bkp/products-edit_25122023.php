@@ -68,6 +68,11 @@ if(@$_SESSION['user_id']==''){
     <body data-sidebar="dark">
     
     <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTVQJ7SR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 
         <!-- Begin page -->
         <div id="layout-wrapper">          
