@@ -51,6 +51,11 @@ $selectStoneFilter=$dbConn->execute("SELECT prod_stone_cat From products_data WH
     </head>
     
     <body>
+	    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTVQJ7SR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
         
         <button onclick="topFunction()" id="topscroll" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 <header>
